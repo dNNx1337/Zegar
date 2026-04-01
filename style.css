@@ -1,0 +1,162 @@
+/* --- BAZA W STYLU APPLE LIGHT MODE (1024x600) --- */
+body {
+    background-color: #F2F2F7;
+    color: #1C1C1E;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow: hidden; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw; 
+    padding: 20px 40px; 
+    box-sizing: border-box;
+}
+
+/* --- SEKCJA GÓRNA --- */
+.section-top {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 15px; 
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#clock {
+    font-size: 140px; 
+    font-weight: 300; 
+    color: #000000;
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-left: -6px; 
+}
+
+#date {
+    font-size: 32px; 
+    font-weight: 500;
+    color: #8E8E93;
+    margin-top: 8px; 
+    padding-left: 5px;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#location {
+    font-size: 20px; 
+    font-weight: 600;
+    color: #8E8E93;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-right: 5px; 
+}
+
+#weather {
+    font-size: 32px; 
+    font-weight: 500;
+    color: #1C1C1E;
+    background-color: #FFFFFF; 
+    padding: 14px 28px; 
+    border-radius: 40px; 
+    border: 1px solid #E5E5EA;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04); 
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.weather-icon {
+    width: 60px;  
+    height: 60px;
+    vertical-align: middle;
+    margin-top: -5px; 
+}
+
+/* --- SEKCJA DOLNA --- */
+.section-bottom {
+    flex: 1; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    align-items: start; 
+}
+
+.transport-column {
+    background-color: #FFFFFF; 
+    border-radius: 24px; 
+    padding: 18px 25px; 
+    border: 2px solid #D1D1D6; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+
+.transport-column h2 {
+    color: #007AFF; 
+    font-size: 16px; 
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F2F2F7; 
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    gap: 8px; 
+}
+
+/* --- SYSTEM 3 KOLUMN DLA ROZKŁADU --- */
+.departure-row {
+    font-size: 26px; 
+    font-weight: 600;
+    margin: 8px 0; 
+    display: flex;
+    align-items: center;
+}
+
+.col-left { flex: 1; text-align: left; }
+.col-center { flex: 1; text-align: center; }
+.col-right { flex: 1; text-align: right; }
+
+.line-number { color: #1C1C1E; font-weight: 700; }
+.time-left { color: #FF9500; font-weight: 700; }
+
+.time-exact { color: #8E8E93; font-size: 22px; font-weight: 500; }
+.delay-late { color: #FF3B30; font-size: 18px; font-weight: 600; }
+.delay-early { color: #34C759; font-size: 18px; font-weight: 600; }
+.delay-ontime { color: #8E8E93; font-size: 18px; font-weight: 500; }
+.delay-realtime { color: #34C759; font-size: 18px; font-weight: 500; }
+
+/* --- ANIMACJE --- */
+@keyframes fadeInContent {
+    0%   { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.content-animate {
+    animation: fadeInContent 1.5s ease-out forwards;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.time-urgent {
+    color: #FF3B30; 
+    animation: pulse 2s infinite ease-in-out; 
+}
