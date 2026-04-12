@@ -1,4 +1,4 @@
-const STOP_ID = 32050; // ID przystanku ZKM (Witomino Centrum)
+const STOP_ID = 30139; // ID przystanku ZKM (Witomino Centrum)
 
 function updateClock() {
     const now = new Date();
